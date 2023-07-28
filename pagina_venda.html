@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja SizeBay</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="overlay"></div>
+
+    <nav class="navbar">
+      <div>
+        <img class="logo" src="./imgs/logo_sizebay-gray.svg" alt="" />
+      </div>
+      <ul>
+        <li><a href="">Ajuda</a></li>
+        <li><a href="https://sizebay.com">quem somos nós</a></li>
+        <li>
+          <a href="">
+            <img
+              src="./imgs/shopping-cart-icon-white-12.jpg"
+              alt=""
+            />Carrinho</a
+          >
+        </li>
+        <li>
+          <a href=""><b>Entrar/Cadastrar</b></a>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+
+    <div class="anuncio"></div>
+    <div class="content">
+      <div class="imagens">
+        <img src="./imgs/roupas/roupa1.webp" onclick="selectImage(this)">
+        <img src="./imgs/roupas/roupa2.jpg" onclick="selectImage(this)">
+        <img src="./imgs/roupas/roupa3.webp" onclick="selectImage(this)">
+        <img src="./imgs/roupas/roupa4.webp" onclick="selectImage(this)">
+
+      </div>
+      <div class="imagemPrincipal">
+        <img src="./imgs/roupas/roupa1.webp"/>
+      </div>
+
+      <div class="produtoInfo">
+        <h2>Camiseta Masculina Manga Longa Com Peitilho</h2>
+        <br />
+        <h2>R$ 159,90</h2>
+        <p style="font-size: 14px">Em até 5x R$ 31,99 sem juros</p>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="cores">
+          <h3 class="titulo">Cor:</h3>
+
+          <div
+            id="cor"
+            onclick="selectColor(this)"
+            style="background-color: beige"
+          ></div>
+          <div
+            id="cor"
+            onclick="selectColor(this)"
+            style="background-color: black"
+          ></div>
+          <div
+            id="cor"
+            onclick="selectColor(this)"
+            style="background-color: green"
+          ></div>
+          <div
+            id="cor"
+            onclick="selectColor(this)"
+            style="background-color: white"
+          ></div>
+        </div>
+        <br />
+        <br />
+
+        <div class="tamanho">
+          <h3 class="titulo">Tamanho:</h3>
+
+          <button>P</button>
+          <button>M</button>
+          <button>G</button>
+          <button>XG</button>
+          <button>XXG</button>
+        </div>
+
+        <br />
+        <p>com dúvida no tamanho? use:</p>
+
+        <div class="sizebay">
+          <button onclick="selectButtonSizebay('tabela')">
+            <img src="./imgs/regua.webp" alt="" />
+
+            <p>Tabela de medidas</p>
+          </button>
+          <button onclick="selectButtonSizebay('provador')">
+            <img src="./imgs/vfrIcon.svg" alt="" />
+
+            <p>Provador Virtual</p>
+          </button>
+        </div>
+
+        <br />
+        <br />
+
+        <div class="descricao"></div>
+        <h3 class="titulo">Descricão:</h3>
+        <p>
+          Camiseta masculina manga longa com peitilho, a clássica essencial do
+          armário em um shape repaginado. Elaborada em malha de ribana que dá um
+          aspecto texturizado, além de peitilho com botões, atributos que
+          garantem um visual moderno. O item ideal para montar looks práticos e
+          estilosos para o dia a dia.
+        </p>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div id="sizebayModal">
+        <span class="fechar" id="fecharModal" onclick="showModal('#modal')"
+          >&times;</span
+        >
+      </div>
+    </div>
+  </body>
+</html>
